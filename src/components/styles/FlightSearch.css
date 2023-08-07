@@ -1,0 +1,44 @@
+.flight-search {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.search-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.option label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.option input,
+.option select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 5px;
+}

@@ -1,0 +1,28 @@
+.navigation {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+  background-color: #ddd;
+}
