@@ -1,6 +1,6 @@
 # Proyecto Avianca
 
-Este proyecto fue creado por:\ 
+Este proyecto fue creado por:\
 Simón Echeverri\
 Kevin Viera\
 Camilo Zapata Cárdenas
