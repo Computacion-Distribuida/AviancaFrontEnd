@@ -5,11 +5,11 @@ function Navigation() {
   return (
     <nav className="navigation">
       <ul>
-        <li><a href="#">Vuelos</a></li>
-        <li><a href="#">Promociones</a></li>
-        <li><a href="#">Destinos</a></li>
-        <li><a href="#">Check-in</a></li>
-        <li><a href="#">Más</a></li>
+        <li><a href="/">Vuelos</a></li>
+        <li><a href="/">Promociones</a></li>
+        <li><a href="/">Destinos</a></li>
+        <li><a href="/">Check-in</a></li>
+        <li><a href="/">Soporte</a></li>
       </ul>
     </nav>
   );

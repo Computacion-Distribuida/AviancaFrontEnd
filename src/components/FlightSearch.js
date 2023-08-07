@@ -40,7 +40,6 @@ function FlightSearch() {
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
-              {/* Agregar más opciones si es necesario */}
             </select>
           </div>
           <div className="option">
@@ -48,7 +47,6 @@ function FlightSearch() {
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
-              {/* Agregar más opciones si es necesario */}
             </select>
           </div>
           <div className="option">
@@ -56,7 +54,6 @@ function FlightSearch() {
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
-              {/* Agregar más opciones si es necesario */}
             </select>
           </div>
           <div className="option">

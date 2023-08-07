@@ -1,6 +1,7 @@
 .navigation {
   background-color: #f2f2f2;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 0px;
 }
 
 .navigation ul {

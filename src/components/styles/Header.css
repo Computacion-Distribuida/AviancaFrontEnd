@@ -9,8 +9,14 @@
 
 .logo {
   font-size: 24px;
+  cursor: pointer;
   font-weight: bold;
 }
+
+.logo img {
+  width: 150px;
+}
+
 
 .user-actions a {
   margin-left: 20px;
