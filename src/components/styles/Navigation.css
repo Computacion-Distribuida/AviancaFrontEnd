@@ -27,3 +27,15 @@
 .navigation a:hover {
   background-color: #ddd;
 }
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation li {
+    margin: 5px 0;
+  }
+}

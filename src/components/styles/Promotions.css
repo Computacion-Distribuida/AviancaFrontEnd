@@ -8,30 +8,31 @@
 
 .promotion-slide {
   position: relative;
-}
-
-.promotion-slide img {
-  width: 100%;
+  display: inline-block; /* Cambia a inline-block para ajustar al contenido */
 }
 
 .slide-description {
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
+  justify-content: center; /* Alinea verticalmente en el centro */
+  align-items: center; /* Alinea horizontalmente en el centro */
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 10px;
   border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Centra vertical y horizontalmente */
 }
 
 .buy-button {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #f50057;
+  background-color: #ff0000;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -42,4 +43,17 @@
 
 .buy-button:hover {
   background-color: #c51162;
+}
+
+@media (max-width: 768px) {
+  .slide-description {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .buy-button {
+    height: auto;
+  }
 }

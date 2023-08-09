@@ -3,7 +3,7 @@ import './styles/FlightSearch.css';
 
 function FlightSearch() {
   const [isRoundTrip, setIsRoundTrip] = useState(true);
-  
+
   const handleRoundTripChange = () => {
     setIsRoundTrip(!isRoundTrip);
   };
@@ -21,8 +21,6 @@ function FlightSearch() {
             <label>Hacia</label>
             <input type="text" placeholder="Destino" />
           </div>
-        </div>
-        <div className="search-options">
           <div className="option">
             <label>Salida</label>
             <input type="date" />
@@ -33,30 +31,20 @@ function FlightSearch() {
               <input type="date" />
             </div>
           )}
-        </div>
-        <div className="search-options">
           <div className="option">
-            <label>Adultos</label>
+            <label>Pasajeros</label>
             <select>
               <option value="1">1</option>
               <option value="2">2</option>
+              <option value="2">3</option>
+              <option value="2">4</option>
+              <option value="2">5</option>
+              <option value="2">6</option>
+              <option value="2">7</option>
+              <option value="2">8</option>
             </select>
           </div>
-          <div className="option">
-            <label>Niños</label>
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div className="option">
-            <label>Bebés</label>
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div className="option">
+          {/* <div className="option">
             <label>Tipo de Vuelo</label>
             <div className="checkbox-container">
               <input
@@ -66,9 +54,9 @@ function FlightSearch() {
               />
               <label>{isRoundTrip ? 'Ida y Vuelta' : 'Solo Ida'}</label>
             </div>
-          </div>
+          </div> */}
+          <button className="search-button">Buscar Vuelos</button>
         </div>
-        <button className="search-button">Buscar Vuelos</button>
       </div>
     </section>
   );
