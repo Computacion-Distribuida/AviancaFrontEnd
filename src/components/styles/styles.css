@@ -1,0 +1,27 @@
+.MuiTableRow-root:hover {
+  background-color: #f1f1f1 !important;
+}
+
+.ant-modal-content{
+  padding: 10px 10px !important;
+}
+
+.ant-modal-footer{
+  margin-top: 0 !important;
+}
+
+.ant-modal-mask{
+  z-index: 1400 !important;
+}
+
+.ant-modal-wrap {
+  z-index: 1500 !important;
+}
+
+.Expand-Button:hover {
+  color: gray !important;
+}
+
+.Export-Button:hover {
+  color: gray !important;
+}
