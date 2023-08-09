@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga';
+
+// Inicializar Google Analytics con tu código de seguimiento
+ReactGA.initialize('G-EJ0DRHFXVN');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
