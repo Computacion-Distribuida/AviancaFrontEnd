@@ -2,9 +2,20 @@ import React from 'react';
 import './styles/Login.css';
 import { Auth } from 'aws-amplify';
 function Login() {
+  async function signOut() {
+    try {
+      await Auth.signOut();
+    } catch (error) {
+      console.log('error signing out: ', error);
+    }
+  }
   async function checkUser() {
-    const user = await Auth.currentAuthenticatedUser();
-    console.log('user: ', user);
+    try {
+      const user = await Auth.currentAuthenticatedUser();
+      console.log('user: ', user);
+    } catch (error) {
+      console.log('error: ', error);
+    }
   }
   return (
     <div className="login-container">
@@ -16,13 +27,9 @@ function Login() {
         <input type="password" />
         <button className="login-button">Iniciar Sesión</button>
       </form>
-      <button onClick={()=> Auth.federatedSignIn({
-        provider: 'Facebook'
-      })}>FACEBOOK</button>
-            <button onClick={()=> Auth.federatedSignIn({
-        provider: 'GOOGLE'
-      })}>GOOGLE</button>
+      <button onClick={()=> Auth.federatedSignIn()}>normal</button>
       <button onClick={checkUser}>Check User</button>
+      <button onClick={signOut}>Sign Out</button>
     </div>
   );
 }
