@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aviancaappcognito-staging-232507-authRole",
+      "UnauthRoleArn": "arn:aws:iam::380559182809:role/amplify-aviancaappcognito-staging-232507-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::380559182809:role/amplify-aviancaappcognito-staging-232507-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-aviancaappcognito-staging-232507-deployment",
+      "UnauthRoleName": "amplify-aviancaappcognito-staging-232507-unauthRole",
+      "StackName": "amplify-aviancaappcognito-staging-232507",
+      "StackId": "arn:aws:cloudformation:us-east-2:380559182809:stack/amplify-aviancaappcognito-staging-232507/79445480-3967-11ee-b540-0a3122ce92e7",
+      "AmplifyAppId": "d2uvlnvdo7flu2"
+    },
+    "categories": {
+      "auth": {
+        "AviancaAppCognito": {}
+      }
+    }
+  }
+}
