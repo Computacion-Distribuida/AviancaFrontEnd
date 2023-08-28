@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './styles/FlightCatalog.css';
 import client from "../contentful";
+import FlightTable from "./FlightTable";
 import SimpleTable from "./SimpleTable";
 
 function FlightCatalog() {
@@ -48,7 +49,8 @@ function FlightCatalog() {
       </section>
 
       <div>
-      <SimpleTable data={vuelos} />
+      {/* <SimpleTable data={vuelos} /> */}
+       <FlightTable flights={vuelos} />
       </div>
     </div>
   );

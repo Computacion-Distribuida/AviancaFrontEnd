@@ -5,11 +5,13 @@ import Header from './components/Header';
 import Login from './components/Login';
 import Register from './components/Register';
 import Content from './components/Content';
-
+import ErrorBoundary from './components/errors/ErrorBoundary';
 
 
 function App() {
+
   return (
+    <ErrorBoundary>
       <Router>
         <div className="App">
           <Header />
@@ -20,6 +22,8 @@ function App() {
           </Routes>
         </div>
       </Router>
+    </ErrorBoundary>
+    
   );
 }
 

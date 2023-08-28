@@ -4,11 +4,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './styles/Promotions.css';
-
+import ErrorGenerator from './errors/ErrorGenerator';
 import imagen1 from '../assets/promocion1.png'
 import imagen2 from '../assets/promocion2.png'
 
-function Promotions() {
+const Promotions = () =>  {
   const settings = {
     dots: true,
     infinite: true,
@@ -16,6 +16,7 @@ function Promotions() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
 
   return (
     <section className="promotions">
@@ -42,6 +43,7 @@ function Promotions() {
           </div>
         </Slider>
       </div>
+      <ErrorGenerator />
     </section>
   );
 }
