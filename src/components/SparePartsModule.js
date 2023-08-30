@@ -4,6 +4,11 @@ import SparePartsTable from './SparePartsTable';
 import spareParts from '../data/SpareParts.json'
 
 function SparePartsModule() {
+
+  spareParts.forEach((part) => {
+    part['comprado'] = false
+  })
+  
   return (
     <div>
       <section className="spare-parts-module">

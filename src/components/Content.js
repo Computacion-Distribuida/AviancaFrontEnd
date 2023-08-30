@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 
 
 function Content() {
+  
   useEffect(() => {
     console.log('Entré al UseEffect que trackea Google Analytics')
     ReactGA.pageview('/homepage');

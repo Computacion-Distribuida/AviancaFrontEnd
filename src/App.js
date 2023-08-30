@@ -1,6 +1,6 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import React, { useEffect, useState } from "react";
 import Header from './components/Header';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -8,15 +8,37 @@ import Content from './components/Content';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 import SparePartsModule from './components/SparePartsModule';
 import Navigation from './components/Navigation';
+import { Auth } from 'aws-amplify';
 
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  useEffect(() => {
+    async function checkUser() {
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2500));
+        const user = await Auth.currentAuthenticatedUser();
+        console.log('user: ', user);
+        setIsLoggedIn(true)
+      } catch (error) {
+        console.log('error: ', error);
+      }
+    
+    }
+    checkUser()
+    
+  }, []);
+  
+  console.log(isLoggedIn)
+
 
   return (
     <ErrorBoundary>
       <Router>
         <div className="App">
-          <Header />
+          <Header isLoggedIn = {isLoggedIn} />
           <Navigation />
           <Routes>
             <Route path="/" element={<Content />} />

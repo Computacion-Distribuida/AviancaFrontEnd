@@ -101,7 +101,6 @@ const SimpleTable = ({ data }) => {
     );
   }
 
-  console.log(data)
   return (
     <>
       <Typography variant="h4" mb={1.5} padding={'2px'}>

@@ -4,8 +4,6 @@ import './styles/FlightCard.css';
 
 const FlightCard = ({ flight }) => {
 
-  console.log(flight);
-
   return (
     <div className="flight-card">
       <img src={flight.imagen.fields.file.url} alt={`Vuelo ${flight.imagen.fields.description}`} />

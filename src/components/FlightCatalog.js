@@ -34,7 +34,6 @@ function FlightCatalog() {
           return fields
         })
         setVuelos(vuelosInfo);
-        console.log(vuelosInfo);
       });
     }
     getVuelos();
