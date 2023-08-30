@@ -3,7 +3,7 @@ import './styles/FlightCatalog.css';
 import client from "../contentful";
 import FlightCard from "./FlightCard"; // Importa el nuevo componente FlightCard
 
-function FlightCatalog({ searchCriteria }) {
+function FlightCatalog({ searchCriteria = {} }) {
 
   const [vuelos, setVuelos] = useState([]);
   useEffect(() => {
