@@ -1,0 +1,17 @@
+.flight-catalog {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.flight-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards por fila */
+  gap: 20px; /* Espacio entre las cards */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .flight-list {
+    display: block;
+  }
+}

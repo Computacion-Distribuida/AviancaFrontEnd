@@ -7,7 +7,7 @@ function Navigation() {
     <nav className="navigation">
       <ul>
         {/* <li><a href="/">Vuelos</a></li> */}
-        <Link to="/">Vuelos</Link>
+        <Link to="/vuelos">Vuelos</Link>
         <Link to="/repuestos">Repuestos</Link>
         <Link to="/">Tiquetes</Link>
         <Link to="/">Soporte</Link>

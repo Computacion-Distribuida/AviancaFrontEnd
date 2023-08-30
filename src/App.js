@@ -9,7 +9,8 @@ import ErrorBoundary from './components/errors/ErrorBoundary';
 import SparePartsModule from './components/SparePartsModule';
 import Navigation from './components/Navigation';
 import { Auth } from 'aws-amplify';
-
+import FlightDetails from './components/FlightDetails';
+import FlightCatalog from './components/FlightCatalog';
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Content />} />
             <Route path="/repuestos" element={<SparePartsModule />} />
+            <Route path="/flight/:flightId" element={<FlightDetails />} />
+            <Route path="/vuelos" element={<FlightCatalog />} />
             <Route path="/iniciar-sesion" element={<Login />} />
             <Route path="/registro" element={<Register />} />
           </Routes>
