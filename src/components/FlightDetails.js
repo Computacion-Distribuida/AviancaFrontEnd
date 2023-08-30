@@ -23,6 +23,8 @@ const FlightDetails = () => {
         seatNumber: "A2",
         ticketPrice: flight.precio
     };
+
+    console.log(requestBody)
     
     const url = 'https://bzlyjkqexc.execute-api.us-east-1.amazonaws.com/ticket';
     const options = {
@@ -30,6 +32,7 @@ const FlightDetails = () => {
       headers: {
         'Content-Type': 'application/json'
       },
+      mode: 'cors',
       body: JSON.stringify(requestBody)
     };
 
@@ -47,7 +50,10 @@ const FlightDetails = () => {
     };
     const clients_info = await makeCompra();
     console.log(clients_info);
-    console.log('Vuelo comprado!')
+    if (clients_info === 201 || clients_info === 200) {
+      console.log('Vuelo comprado!')
+    }
+    
 
     return clients_info
   };

@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     async function checkUser() {
       try {
-        await new Promise(resolve => setTimeout(resolve, 2500));
+        await new Promise(resolve => setTimeout(resolve, 3500));
         const user = await Auth.currentAuthenticatedUser();
         console.log('user: ', user);
         setIsLoggedIn(true)
