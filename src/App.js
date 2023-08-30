@@ -6,6 +6,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Content from './components/Content';
 import ErrorBoundary from './components/errors/ErrorBoundary';
+import SparePartsModule from './components/SparePartsModule';
+import Navigation from './components/Navigation';
 
 
 function App() {
@@ -15,8 +17,10 @@ function App() {
       <Router>
         <div className="App">
           <Header />
+          <Navigation />
           <Routes>
             <Route path="/" element={<Content />} />
+            <Route path="/repuestos" element={<SparePartsModule />} />
             <Route path="/iniciar-sesion" element={<Login />} />
             <Route path="/registro" element={<Register />} />
           </Routes>

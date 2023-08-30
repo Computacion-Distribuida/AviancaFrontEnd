@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './styles/FlightCatalog.css';
 import client from "../contentful";
-import FlightTable from "./FlightTable";
-import SimpleTable from "./SimpleTable";
+import FlightCard from "./FlightCard"; // Importa el nuevo componente FlightCard
 
 function FlightCatalog() {
 
@@ -45,13 +44,13 @@ function FlightCatalog() {
     <div>
       <section className="flight-catalog">
         <h2>Catálogo de Vuelos</h2>
-        <div className="flight-list"></div>
+        <div className="flight-list">
+          {/* Mapea los vuelos utilizando el nuevo componente FlightCard */}
+          {vuelos.map((vuelo) => (
+            <FlightCard key={vuelo.id} flight={vuelo} />
+          ))}
+        </div>
       </section>
-
-      <div>
-      {/* <SimpleTable data={vuelos} /> */}
-       <FlightTable flights={vuelos} />
-      </div>
     </div>
   );
 }

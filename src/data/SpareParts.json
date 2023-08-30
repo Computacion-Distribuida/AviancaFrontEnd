@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Bujía de Encendido",
+    "marca": "AviaParts",
+    "precio": 25.99,
+    "cantidadDisponible": 50
+  },
+  {
+    "nombre": "Filtro de Aceite",
+    "marca": "AeroTech",
+    "precio": 15.50,
+    "cantidadDisponible": 100
+  },
+  {
+    "nombre": "Sensor de Presión de Neumáticos",
+    "marca": "SkySensors",
+    "precio": 32.75,
+    "cantidadDisponible": 30
+  },
+  {
+    "nombre": "Bomba de Combustible",
+    "marca": "FuelMaster",
+    "precio": 120.00,
+    "cantidadDisponible": 15
+  },
+  {
+    "nombre": "Alternador",
+    "marca": "PowerGen",
+    "precio": 85.50,
+    "cantidadDisponible": 40
+  },
+  {
+    "nombre": "Radiador de Refrigeración",
+    "marca": "CoolTech",
+    "precio": 65.00,
+    "cantidadDisponible": 25
+  },
+  {
+    "nombre": "Tren de Aterrizaje",
+    "marca": "LandingPro",
+    "precio": 420.75,
+    "cantidadDisponible": 10
+  },
+  {
+    "nombre": "Alerón de Control",
+    "marca": "AeroDynamics",
+    "precio": 75.25,
+    "cantidadDisponible": 20
+  },
+  {
+    "nombre": "Transponder",
+    "marca": "NavTech",
+    "precio": 98.99,
+    "cantidadDisponible": 30
+  },
+  {
+    "nombre": "Sonda de Temperatura del Motor",
+    "marca": "EngineProbe",
+    "precio": 28.00,
+    "cantidadDisponible": 50
+  }
+]

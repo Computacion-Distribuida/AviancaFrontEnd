@@ -6,9 +6,8 @@ function Navigation() {
     <nav className="navigation">
       <ul>
         <li><a href="/">Vuelos</a></li>
-        <li><a href="/">Promociones</a></li>
-        <li><a href="/">Destinos</a></li>
-        <li><a href="/">Check-in</a></li>
+        <li><a href="/repuestos">Repuestos</a></li>
+        <li><a href="/">Tiquetes</a></li>
         <li><a href="/">Soporte</a></li>
       </ul>
     </nav>
