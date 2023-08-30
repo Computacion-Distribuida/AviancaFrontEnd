@@ -1,11 +1,57 @@
 import React, { useState } from 'react';
 import './styles/FlightSearch.css';
 
-function FlightSearch() {
-  const [isRoundTrip, setIsRoundTrip] = useState(true);
+function FlightSearch({ onSearch }) {
+  const [isRoundTrip, setIsRoundTrip] = useState(false);
+
+  const [from, setFrom] = useState('');
+  const [to, setTo] = useState('');
+  const [departureDate, setDepartureDate] = useState('');
+
+  const handleFromChange = (event) => {
+    const value = event.target.value;
+    setFrom(value);
+  };
+
+  const handleToChange = (event) => {
+    const value = event.target.value;
+    setTo(value);
+  };
+
+  const handleDateChange = (event) => {
+    const value = event.target.value;
+    console.log(value);
+    setDepartureDate(value);
+  };
 
   const handleRoundTripChange = () => {
     setIsRoundTrip(!isRoundTrip);
+  };
+
+  const handleSearchClick = () => {
+    let tempCriteria = {}
+    if(from !== '' && to !== '' && departureDate !== '') {
+      tempCriteria = {from, to, departureDate}
+    }
+    else if(from !== '' && to !== ''){
+      tempCriteria = {from, to}
+    }
+    else if(from !== '' && departureDate !== ''){
+      tempCriteria = {from, departureDate}
+    }
+    else if(to !== '' && departureDate !== ''){
+      tempCriteria = {to, departureDate}
+    }
+    else if(from !== ''){
+      tempCriteria = {from}
+    }
+    else if(to !== ''){
+      tempCriteria = {to}
+    }
+    else if(departureDate !== ''){
+      tempCriteria = {departureDate}
+    }
+    onSearch(tempCriteria);
   };
 
   return (
@@ -15,15 +61,15 @@ function FlightSearch() {
         <div className="search-options">
           <div className="option">
             <label>Desde</label>
-            <input type="text" placeholder="Origen" />
+            <input type="text" placeholder="Origen" onChange={handleFromChange} />
           </div>
           <div className="option">
             <label>Hacia</label>
-            <input type="text" placeholder="Destino" />
+            <input type="text" placeholder="Destino" onChange={handleToChange} />
           </div>
           <div className="option">
             <label>Salida</label>
-            <input type="date" />
+            <input type="date" onChange={handleDateChange} />
           </div>
           {isRoundTrip && (
             <div className="option">
@@ -31,7 +77,7 @@ function FlightSearch() {
               <input type="date" />
             </div>
           )}
-          <div className="option">
+          {/* <div className="option">
             <label>Pasajeros</label>
             <select>
               <option value="1">1</option>
@@ -43,7 +89,7 @@ function FlightSearch() {
               <option value="2">7</option>
               <option value="2">8</option>
             </select>
-          </div>
+          </div> */}
           {/* <div className="option">
             <label>Tipo de Vuelo</label>
             <div className="checkbox-container">
@@ -55,7 +101,7 @@ function FlightSearch() {
               <label>{isRoundTrip ? 'Ida y Vuelta' : 'Solo Ida'}</label>
             </div>
           </div> */}
-          <button className="search-button">Buscar Vuelos</button>
+          <button className="search-button" onClick={handleSearchClick}>Buscar Vuelos</button>
         </div>
       </div>
     </section>
